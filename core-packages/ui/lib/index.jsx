@@ -2,7 +2,13 @@
 	this.control = control;
 	this.type = type;
 	this.do = function (fn) {
-		this.control.addEventListener(type, fn);
+		// no idea why addEventListener('click', fn) doesn't work
+		// for new CC app versions. This is an ugly fix for that. 
+		if (type == 'click') {
+			this.control.onClick = fn;
+		} else {
+			this.control.addEventListener(type, fn);
+		}
 		return this;
 	}
 }
