@@ -3,7 +3,7 @@
 	this.type = type;
 	this.do = function (fn) {
 		// no idea why addEventListener('click', fn) doesn't work
-		// for new CC app versions. This is an ugly fix for that. 
+		// for new CC app versions. This is an ugly fix for that.g 
 		if (type == 'click') {
 			this.control.onClick = fn;
 		} else {
@@ -243,6 +243,7 @@ function UI () {
 		if (this[name] != undefined) throw new Error("{} is a reserved name.".format(name));
 		
 		var control = self.window.add(type, undefined, text, properties);
+
 		control.merge(new ControlMixins());
 		this[name] = control;
 		self._last_added = control;

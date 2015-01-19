@@ -2,6 +2,7 @@
 var base64 = exports;
 #include "../dependencies/base64.js"
 #include "../dependencies/json2.js"
+#include "../dependencies/lodash.js"
 
 // keyvalue encoding comes in handy to create things like INI files and HTTP headers
 

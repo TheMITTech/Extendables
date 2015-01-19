@@ -15,7 +15,7 @@ import os
 import sys
 import re
 
-PACKAGEFOLDERS = ['extendables/core-packages', 'site-packages']
+PACKAGEFOLDERS = ['core-packages']
 
 all_packages = {}
 for folder in PACKAGEFOLDERS:

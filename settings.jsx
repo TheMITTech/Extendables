@@ -2,7 +2,7 @@
 
 /* configuration */
 $.level = 2;
-$.strict = true;
+$.strict = false;
 
 /* extendables settings */
 settings.package_directories = ['./core-packages', './site-packages'];

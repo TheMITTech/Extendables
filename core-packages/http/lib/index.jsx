@@ -371,7 +371,6 @@ function HTTPRequest (method, url, timeout) {
 		while (connection.connected && !response.complete()) {
 			response.push(connection.read(), connection.eof);
 		}
-		$.writeln(response.serialize('json'));
 		return response;
 	}
 
