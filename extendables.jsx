@@ -18,12 +18,3 @@ if (project_specific_settings.exists) {
 #include "loader.jsx";
 load_modules(settings.package_directories);
 #include "context.jsx";
-
-// write away buffered log messages
-
-var logging = require("logging");
-var syslog = new logging.Log("extendables.log");
-
-log_buffer.forEach(function (message) {
-	syslog.log.apply(null, message);
-});
